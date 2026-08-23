@@ -1,0 +1,698 @@
+:root {
+  --ink: #08090b;
+  --paper: #f3f4f2;
+  --blue: #1463ff;
+  --muted: #858a92;
+  --line: rgba(8, 9, 11, 0.16);
+  --display: "Manrope", sans-serif;
+  --mono: "DM Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--display);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  height: 76px;
+  justify-content: space-between;
+  padding: 0 5vw;
+  position: relative;
+  z-index: 5;
+}
+
+.brand {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.09em;
+}
+
+.brand span {
+  color: var(--blue);
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a,
+.header-contact,
+.kicker,
+.hero-footer,
+.work-number,
+.work-screen span,
+.work-screen small {
+  font-family: var(--mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.header-contact {
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 0.2rem;
+}
+
+.hero {
+  background: var(--ink);
+  color: var(--paper);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: calc(100svh - 76px);
+  overflow: hidden;
+  padding: clamp(4rem, 9vw, 9rem) 5vw 6rem;
+  position: relative;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.kicker {
+  color: var(--blue);
+  margin-bottom: 1.25rem;
+}
+
+.hero h1,
+.statement h2,
+.section-header h2,
+.process h2,
+.contact h2 {
+  font-size: clamp(3.2rem, 7vw, 8rem);
+  font-weight: 800;
+  letter-spacing: -0.09em;
+  line-height: 0.91;
+}
+
+.hero h1 em,
+.contact h2 em {
+  color: var(--blue);
+  font-style: normal;
+}
+
+.hero-text {
+  color: #b8bdc3;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-top: 2rem;
+  max-width: 390px;
+}
+
+.hero-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  margin-top: 2.3rem;
+}
+
+.button {
+  align-items: center;
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 700;
+  gap: 2rem;
+  justify-content: space-between;
+  letter-spacing: 0.04em;
+  padding: 1rem 1.2rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button-blue {
+  background: var(--blue);
+  color: white;
+}
+
+.quiet-link {
+  border-bottom: 1px solid #7e858d;
+  font-size: 0.76rem;
+  padding-bottom: 0.35rem;
+}
+
+.hero-art {
+  background:
+    radial-gradient(
+      circle at 65% 30%,
+      #d59a53 0,
+      #5e3219 34%,
+      #15100e 70%
+    );
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 20px 25px 0 var(--blue);
+  margin: -2rem 0 2rem clamp(2rem, 6vw, 7rem);
+  min-height: 460px;
+  padding: 1.5rem;
+  position: relative;
+  transform: rotate(3deg);
+}
+
+.art-top {
+  display: flex;
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  justify-content: space-between;
+  letter-spacing: 0.08em;
+}
+
+.art-copy {
+  bottom: 1.6rem;
+  left: 1.5rem;
+  position: absolute;
+}
+
+.art-copy small {
+  color: #edc594;
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+}
+
+.art-copy h2 {
+  font-size: clamp(2.5rem, 4vw, 4.7rem);
+  letter-spacing: -0.09em;
+  line-height: 0.84;
+  margin: 1rem 0 1.6rem;
+}
+
+.art-copy a {
+  border-bottom: 1px solid #d7ecff;
+  color: #d7ecff;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  padding-bottom: 0.3rem;
+}
+
+.art-stamp {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  bottom: 2rem;
+  display: grid;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  height: 104px;
+  line-height: 1.4;
+  place-items: center;
+  position: absolute;
+  right: -3rem;
+  text-align: center;
+  transform: rotate(14deg);
+  width: 104px;
+}
+
+.hero-footer {
+  bottom: 2rem;
+  color: #747b84;
+  display: flex;
+  justify-content: space-between;
+  left: 5vw;
+  position: absolute;
+  right: 5vw;
+}
+
+.statement {
+  max-width: 1200px;
+  padding: clamp(5rem, 12vw, 12rem) 5vw;
+}
+
+.statement h2 {
+  font-size: clamp(2.4rem, 5.3vw, 5.8rem);
+  max-width: 1050px;
+}
+
+.statement h2 strong {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.work {
+  background: #e8eae8;
+  padding: 7rem 5vw;
+}
+
+.section-header {
+  align-items: end;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: clamp(3rem, 5vw, 5.6rem);
+}
+
+.section-header > p {
+  color: #626870;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.work-list {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.work-item {
+  grid-column: span 6;
+}
+
+.work-item:nth-child(2) {
+  margin-top: 7rem;
+}
+
+.work-item:nth-child(3) {
+  grid-column: 4 / span 6;
+}
+
+.work-number {
+  color: var(--blue);
+  margin-bottom: 0.8rem;
+}
+
+.work-screen {
+  display: flex;
+  flex-direction: column;
+  height: clamp(330px, 40vw, 520px);
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 1.5rem;
+  transition: transform 0.35s ease;
+}
+
+.work-item:hover .work-screen {
+  transform: scale(0.98);
+}
+
+.work-screen h3 {
+  font-size: clamp(2.5rem, 5vw, 5.4rem);
+  letter-spacing: -0.09em;
+  line-height: 0.84;
+}
+
+.work-aurum .work-screen {
+  background:
+    radial-gradient(
+      circle at 70% 25%,
+      #d3a265,
+      #59321d 38%,
+      #17100d 73%
+    );
+  color: white;
+}
+
+.work-lab .work-screen {
+  background: linear-gradient(135deg, #43484b, #111214 66%);
+  color: white;
+}
+
+.work-fit .work-screen {
+  background: linear-gradient(135deg, #1769ff, #06327d 57%, #090b0f);
+  color: white;
+}
+
+.work-info {
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.work-info h3 {
+  font-size: 1.1rem;
+  letter-spacing: -0.04em;
+}
+
+.work-info p {
+  color: #6c7178;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.work-info a {
+  color: var(--blue);
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  white-space: nowrap;
+}
+
+.process {
+  background: var(--ink);
+  color: var(--paper);
+  display: grid;
+  gap: 7vw;
+  grid-template-columns: 1fr 1fr;
+  padding: 8rem 5vw;
+}
+
+.process h2 {
+  font-size: clamp(3rem, 5vw, 5.5rem);
+}
+
+.process ol {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  list-style: none;
+}
+
+.process li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 52px 1fr;
+  padding: 1.6rem 0;
+}
+
+.process li > span {
+  color: var(--blue);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+}
+
+.process li h3 {
+  font-size: 1.1rem;
+}
+
+.process li p {
+  color: #a8adb3;
+  font-size: 0.84rem;
+  line-height: 1.6;
+  margin-top: 0.45rem;
+  max-width: 340px;
+}
+
+.contact {
+  background: var(--blue);
+  color: #fff;
+  min-height: 75vh;
+  padding: clamp(5rem, 10vw, 10rem) 5vw;
+}
+
+.contact .kicker {
+  color: #c9e6ff;
+}
+
+.contact h2 {
+  margin-bottom: 2.5rem;
+  max-width: 950px;
+}
+
+.contact h2 em {
+  color: var(--ink);
+}
+
+.button-light {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.instagram {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  margin-top: 3rem;
+  padding-bottom: 0.35rem;
+  width: max-content;
+}
+
+footer {
+  align-items: center;
+  background: var(--ink);
+  color: #9ba1a8;
+  display: flex;
+  font-size: 0.72rem;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1.6rem 5vw;
+}
+
+footer .brand {
+  color: var(--paper);
+}
+
+@media (max-width: 800px) {
+  .header {
+    height: 66px;
+    padding: 0 1.1rem;
+  }
+
+  .header-contact {
+    font-size: 0.55rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 830px;
+    padding: 5.3rem 1.1rem 12rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.4rem, 15vw, 5rem);
+  }
+
+  .hero-art {
+    bottom: 4.7rem;
+    margin: 0;
+    min-height: 300px;
+    opacity: 0.92;
+    padding: 1rem;
+    position: absolute;
+    right: -45px;
+    width: 245px;
+  }
+
+  .art-copy {
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .art-copy h2 {
+    font-size: 2.3rem;
+  }
+
+  .art-stamp {
+    display: none;
+  }
+
+  .hero-footer {
+    bottom: 1.5rem;
+    left: 1.1rem;
+    right: 1.1rem;
+  }
+
+  .statement,
+  .work,
+  .process,
+  .contact {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  .statement {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+
+  .section-header {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .work {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+
+  .work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .work-item:nth-child(2),
+  .work-item:nth-child(3) {
+    margin-top: 0;
+  }
+
+  .work-screen {
+    height: 360px;
+  }
+
+  .process {
+    gap: 3rem;
+    grid-template-columns: 1fr;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+
+  .contact {
+    min-height: 620px;
+  }
+
+  .contact h2 {
+    font-size: clamp(3rem, 13vw, 4.5rem);
+  }
+
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1.4rem 1.1rem;
+  }
+}
+
+/* Fundos temáticos para os cards de projetos */
+
+.work-screen {
+  isolation: isolate;
+  position: relative;
+}
+
+.work-screen::before,
+.work-screen::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+}
+
+/* AURUM GASTRÔ — prato, talheres e brilho dourado */
+.work-aurum .work-screen {
+  background:
+    radial-gradient(circle at 72% 30%, rgba(255, 208, 141, 0.4) 0 2%, transparent 2.3%),
+    radial-gradient(circle at 72% 30%, rgba(234, 178, 101, 0.23) 0 16%, transparent 16.5%),
+    radial-gradient(circle at 72% 30%, rgba(255, 234, 195, 0.1) 0 29%, transparent 29.5%),
+    radial-gradient(circle at 70% 25%, #d3a265 0, #59321d 42%, #17100d 78%);
+}
+
+.work-aurum .work-screen::before {
+  border: 1px solid rgba(253, 210, 151, 0.5);
+  border-radius: 50%;
+  height: min(30vw, 360px);
+  right: -8%;
+  top: 18%;
+  width: min(30vw, 360px);
+}
+
+.work-aurum .work-screen::after {
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(253, 210, 151, 0.38) 0 1px,
+    transparent 1px 9px
+  );
+  height: 120%;
+  opacity: 0.42;
+  right: 14%;
+  top: -10%;
+  transform: rotate(18deg);
+  width: 7px;
+}
+
+/* BARBER LAB — lâminas, aço escovado e grade técnica */
+.work-lab .work-screen {
+  background:
+    linear-gradient(115deg, transparent 0 57%, rgba(255, 255, 255, 0.07) 57% 58%, transparent 58% 100%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 38px),
+    linear-gradient(135deg, #4a4f52, #161719 62%, #08090a);
+}
+
+.work-lab .work-screen::before {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  height: 190px;
+  right: 10%;
+  top: 16%;
+  width: 190px;
+}
+
+.work-lab .work-screen::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0 38%,
+    rgba(232, 236, 238, 0.45) 38% 44%,
+    transparent 44% 55%,
+    rgba(232, 236, 238, 0.45) 55% 61%,
+    transparent 61%
+  );
+  height: 250px;
+  opacity: 0.55;
+  right: 3%;
+  top: -3%;
+  transform: rotate(39deg);
+  width: 90px;
+}
+
+/* URBAN FIT — pista, pulso e energia azul */
+.work-fit .work-screen {
+  background:
+    radial-gradient(circle at 75% 27%, rgba(111, 190, 255, 0.55) 0, transparent 4%),
+    radial-gradient(circle at 75% 27%, rgba(35, 133, 255, 0.22) 0 20%, transparent 20.5%),
+    repeating-linear-gradient(135deg, transparent 0 22px, rgba(136, 194, 255, 0.11) 22px 24px),
+    linear-gradient(135deg, #1769ff, #06327d 57%, #090b0f);
+}
+
+.work-fit .work-screen::before {
+  border: 16px solid rgba(141, 200, 255, 0.18);
+  border-radius: 50%;
+  height: min(34vw, 380px);
+  right: -15%;
+  top: 14%;
+  width: min(34vw, 380px);
+}
+
+.work-fit .work-screen::after {
+  border-top: 2px solid rgba(188, 224, 255, 0.62);
+  box-shadow:
+    18px -22px 0 -1px rgba(188, 224, 255, 0.5),
+    36px 10px 0 -1px rgba(188, 224, 255, 0.4),
+    54px -12px 0 -1px rgba(188, 224, 255, 0.32);
+  height: 80px;
+  opacity: 0.75;
+  right: 8%;
+  top: 35%;
+  transform: skewX(-25deg);
+  width: 100px;
+}
+
+@media (max-width: 800px) {
+  .work-aurum .work-screen::before {
+    height: 220px;
+    width: 220px;
+  }
+
+  .work-fit .work-screen::before {
+    height: 250px;
+    width: 250px;
+  }
+}
